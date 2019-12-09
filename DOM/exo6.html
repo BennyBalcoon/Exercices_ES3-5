@@ -15,6 +15,16 @@
             console.log(content);
 
         }
+
+        var showAlert = function () {
+            alert("céssakifofer?")
+        }
+
+        var maSecondeFonctionOnClick = function () {
+            var content = document.getElementById("paragraphe2");
+            content.onclick = showAlert();
+            console.log(content);
+        }
     </script>
 
 </head>
@@ -38,8 +48,8 @@
             </p>
         </div>
         <span>1.2</span>. Deuxième paragraphe de la deuxième section et un <a href="#">lien</a>.
-        <div>
-            <h2>
+        <div id="paragraphe2">
+            <h2 onclick="maSecondeFonctionOnClick()">
                 <span>2</span>. Titre de la deuxième section
             </h2>
             <p>
