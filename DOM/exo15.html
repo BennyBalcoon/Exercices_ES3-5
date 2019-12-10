@@ -25,9 +25,8 @@
                 <span>1.1</span>. Premier paragraphe de la première section et un <a href="#">lien</a>.
             </p>
             <p>
-                <span
-                    onmouseout="window.alert('Ce message est affiché quand on ne survole plus cet élément.')">1.2</span>.
-                Deuxième paragraphe de la deuxième section et un <a href="#">lien</a>.
+                <span id="span">1.2</span>.
+                Deuxième paragraphe de la première section et un <a href="#">lien</a>.
             </p>
         </div>
         <div>
@@ -66,6 +65,13 @@
 
     function alertMouseOver() {
         return alert('Ce message est affiché quand on survole ce point.');
+    }
+
+    var span = document.getElementById("span");
+    span.onmouseout = alertMouseOut;
+
+    function alertMouseOut() {
+        return alert('Ce message est affiché quand on ne survole plus cet élément.')
     }
 
     var input = document.getElementById("q");
